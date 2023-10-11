@@ -14,7 +14,7 @@ const orderRoutes = require('./Routes/orderRoutes');
 const app = express();
 
 // Connect to your MongoDB database
-mongoose.connect('mongodb+srv://bhavya:bhavya@cluster0.kin5ecd.mongodb.net/blog?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect('mongodb+srv://mayank:mayank@cluster0.tmbqo77.mongodb.net/DavidBridal?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => {
     console.log('Connected to MongoDB');
   })
