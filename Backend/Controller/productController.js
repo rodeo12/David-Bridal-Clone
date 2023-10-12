@@ -75,6 +75,41 @@ exports.getAllProducts = async (req, res) => {
   }
 };
 
+//delete route
+exports.deleteProduct = async (req, res) => {
+  try {
+    const deletedProduct = await Book.findByIdAndDelete(req.params.id);
+    if (!deletedProduct) {
+      res.status(404).json({ error: 'Book not found' });
+      return;
+    }
+    res.status(200).json({ message: 'Book deleted successfully',deletedProduct  });
+  } catch (error) { 
+   // console.log(error)
+    //res.status(500).json({ error: 'Error deleting book' }); 
+    res.send(error)
+  }
+};
 
 
+
+
+//patch route
+exports.updateProduct = async (req, res) => {
+  try {
+    const updatedProduct = await Book.findByIdAndUpdate(req.params.id,req.body);
+  
+  
+  
+    if (!updatedProduct) {
+      res.status(404).json({ error: 'Book not found' });
+      return;
+    }
+    res.status(200).json({ message: 'Book updated successfully',updatedProduct });
+  } catch (error) { 
+   // console.log(error)
+    //res.status(500).json({ error: 'Error deleting book' }); 
+    res.send(error)
+  }
+};
 

@@ -10,4 +10,12 @@ router.get('/', productController.getAllProducts);
 
 // Add more product-related routes (e.g., get a single product, update product details).
 
+
+//Delete Product
+
+router.delete("/",productController.deleteProduct)
+
+//Update Product
+
+router.put("/",productController.updateProduct)
 module.exports = router;
