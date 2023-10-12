@@ -33,10 +33,10 @@ const productSchema = new mongoose.Schema({
     required: true,
   },
   
-  id: {
-    type: Number,
-    required: true,
-  },
+  // _id: {
+  //   type: Number,
+  //   required: true,
+  // },
   
 
   size: {

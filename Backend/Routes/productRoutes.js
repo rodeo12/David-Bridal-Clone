@@ -13,9 +13,9 @@ router.get('/', productController.getAllProducts);
 
 //Delete Product
 
-router.delete("/",productController.deleteProduct)
+router.delete("/:id",productController.deleteProduct)
 
 //Update Product
 
-router.put("/",productController.updateProduct)
+router.put("/:_id",productController.updateProduct)
 module.exports = router;
